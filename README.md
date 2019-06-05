@@ -10,3 +10,4 @@ purpose this exercise is to see how th binary size differs.
 |--|--|--|
 |[1.VisualStudioProjectNew]()|.NET 4.7.2|4.5|
 |[2.VisualStudioTrimmed]()|.NET 4.7.2|2.5|
+|[3.IlAsm]()|.NET 4.7.2|1.0|
