@@ -8,6 +8,6 @@ purpose this exercise is to see how th binary size differs.
 
 |Folder|Target Framework|Size (KB)|
 |--|--|--|
-|[1.VisualStudioProjectNew]()|.NET 4.7.2|4.5|
-|[2.VisualStudioTrimmed]()|.NET 4.7.2|2.5|
-|[3.IlAsm]()|.NET 4.7.2|1.0|
+|[1.VisualStudioProjectNew](1.VisualStudioProjectNew)|.NET 4.7.2|4.5|
+|[2.VisualStudioTrimmed](2.VisualStudioTrimmed)|.NET 4.7.2|2.5|
+|[3.IlAsm](3.IlAsm)|.NET 4.7.2|1.0|
