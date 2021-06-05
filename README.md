@@ -35,6 +35,8 @@ If you want a Native AOT Hello World smaller still, see [zerosharp by Michal Str
 |Go, following [getting started](https://golang.org/doc/tutorial/getting-started) instructions|1.16.5|2,044|
 |Rust, doing `cargo init && cargo build --release`|1.52.1|141|
 |[Electron](electron)|13.1.1|186,857|
+|Java .JAR file||0.75|
+|[Graal Native Image](graal-native-image)|21.1.0|8978|
 
 ## Notes
 
