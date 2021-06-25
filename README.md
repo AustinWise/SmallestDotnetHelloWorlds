@@ -2,7 +2,7 @@
 # Smallest Dotnet Hello Worlds
 
 This repo contains several implementations of "Hello World" for different .NET platforms. The
-purpose this exercise is to see how th binary size differs.
+purpose this exercise is to see how th binary size differs. I wrote up my findings in [a blog post](https://www.awise.us/2021/06/05/smallest-dotnet.html).
 
 All experiments are done on Windows x64. For .NET 6, the reletive sizes are in
 about the same ballpark for Linux and macOS.
