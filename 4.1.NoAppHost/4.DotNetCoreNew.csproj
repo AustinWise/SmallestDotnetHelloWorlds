@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>_41.NoAppHost</RootNamespace>
-	<UseAppHost>False</UseAppHost>
+    <UseAppHost>False</UseAppHost>
   </PropertyGroup>
 
 </Project>

@@ -1,9 +1,12 @@
 @echo off
 setlocal
 
-call setup_vs_tools.cmd
+cd %~dp0
+
+call ..\setup_vs_tools.cmd
 if not %ERRORLEVEL%==0 (exit /b 1)
-ilasm /X64 /NOCORSTUB hello.il
+
+msbuild /nologo /v:m /m /p:Configuration=Release /p:OutputPath=pub
 if not %ERRORLEVEL%==0 (goto :notok)
 
 :ok

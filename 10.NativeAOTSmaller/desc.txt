@@ -1,0 +1,1 @@
+Native AOT no reflection or internationalization
