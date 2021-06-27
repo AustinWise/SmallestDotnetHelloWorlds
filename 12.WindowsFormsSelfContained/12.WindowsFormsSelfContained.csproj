@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_12.WindowsFormsSelfContained</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <PublishSelfContained>true</PublishSelfContained>
+  </PropertyGroup>
+
+</Project>
