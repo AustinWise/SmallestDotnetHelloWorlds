@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>$(NetCoreTargetFramework)</TargetFramework>
     <RootNamespace>_6.SelfContained</RootNamespace>
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
     <PublishSelfContained>true</PublishSelfContained>

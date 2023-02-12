@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>$(NetCoreTargetFramework)-windows</TargetFramework>
     <RootNamespace>_13.WinFormsSelfContainedTrimmedR2R</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
