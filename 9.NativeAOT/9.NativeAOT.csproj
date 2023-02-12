@@ -5,10 +5,7 @@
     <TargetFramework>$(NetCoreTargetFramework)</TargetFramework>
     <RootNamespace>_9.NativeAOT</RootNamespace>
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="$(NativeAotPackageVersion)" />
-  </ItemGroup>
 
 </Project>

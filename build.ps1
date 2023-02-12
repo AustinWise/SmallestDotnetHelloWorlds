@@ -3,12 +3,12 @@ param(
    [switch]$NoBuild
 )
 
-.\dotnet-install.ps1 -NoPath -InstallDir bin -JSonFile .\global.json
+if (!$NoBuild)
+{
+    .\dotnet-install.ps1 -NoPath -InstallDir bin -JSonFile .\global.json
+}
 
 $dirs = dir | where {$_.Name -match '^\d'} | select Name, @{  label='Num'; expression = { [double] $_.Name.Substring(0,  $_.Name.LastIndexOf(".")) } } | sort {$_.Num}
-
-$native_aot_version = Select-Xml -Path 'Directory.Build.props' -XPath '/Project/PropertyGroup/NativeAotPackageVersion'
-$native_aot_version = $native_aot_version.Node.InnerText
 
 $net_version = Get-Content .\global.json | ConvertFrom-Json
 $net_version = $net_version.sdk.version
@@ -31,6 +31,12 @@ if (!$NoBuild)
 }
 
 foreach ($dir in $dirs) {
+    $skip_file = $dir.Name + "\skip.txt"
+    if (Test-Path $skip_file)
+    {
+        continue
+    }
+
     $desc = Get-Content ($dir.Name + "\desc.txt")
     $framework_file = $dir.Name + "\framework.txt"
     if (Test-Path $framework_file)
@@ -40,13 +46,13 @@ foreach ($dir in $dirs) {
     else
     {
         $csproj_files = dir ($dir.Name + "\*.csproj")
-        if (Select-Xml -Path $csproj_files -XPath '/Project/ItemGroup/PackageReference[@Include = "Microsoft.DotNet.ILCompiler"]')
+        if (Select-Xml -Path $csproj_files -XPath '/Project/PropertyGroup/PublishAot')
         {
-            $framework = "CoreCLR Native AOT ${native_aot_version}"
+            $framework = ".NET SDK ${net_version} NativeAOT"
         }
         else
         {
-            $framework = ".NET ${net_version}"
+            $framework = ".NET SDK ${net_version}"
         }
     }
     $ouput_size = dir -Recurse -Exclude '*.pdb', '*.config' ($dir.Name + '\pub') | Measure-Object -Sum Length

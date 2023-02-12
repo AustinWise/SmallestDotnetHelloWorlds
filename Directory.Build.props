@@ -1,8 +1,6 @@
 <Project>
     <PropertyGroup>
-        <!-- From https://dev.azure.com/dnceng/public/_packaging?_a=package&feed=dotnet-experimental&view=versions&package=Microsoft.DotNet.ILCompiler&protocolType=NuGet -->
-        <NativeAotPackageVersion>6.0.0-rc.1.21420.1</NativeAotPackageVersion>
-        <NetCoreTargetFramework>net6.0</NetCoreTargetFramework>
+        <NetCoreTargetFramework>net7.0</NetCoreTargetFramework>
         <FrameworkTargetFrameworkVersion>v4.7.2</FrameworkTargetFrameworkVersion>
         <PublishDir>pub</PublishDir>
     </PropertyGroup>
