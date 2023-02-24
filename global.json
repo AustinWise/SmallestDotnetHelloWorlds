@@ -1,10 +1,10 @@
 {
   "sdk": {
-    "version": "7.0.102",
+    "version": "8.0.100-preview.1.23115.2",
     "allowPrerelease": true,
     "rollForward": "disable"
   },
   "msbuild-sdks": {
-    "Microsoft.NET.Sdk.IL": "7.0.0"
+    "Microsoft.NET.Sdk.IL": "8.0.0-preview.1.23110.8"
   }
 }

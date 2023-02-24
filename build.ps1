@@ -57,7 +57,7 @@ foreach ($dir in $dirs) {
     }
     $ouput_size = dir -Recurse -Exclude '*.pdb', '*.config' ($dir.Name + '\pub') | Measure-Object -Sum Length
     $ouput_size = $ouput_size.Sum / 1024
-    if ($ouput_size -lt 1024)
+    if ($ouput_size -lt 100)
     {
         $fmt_str = '| [{4}. {0}]({1}) | {2} | {3:N1} |'
     }
